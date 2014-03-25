@@ -277,7 +277,7 @@ Events
 You can use RubyBox's event_response method to return an EventResponse that can be used to process any incoming events.
 
 ```ruby
-eresp = client.event_response
+eresp = client.event_response(stream_position=0, stream_type=:all, limit=100)
 eresp.chunk_size
 eresp.next_stream_position
 eresp.events.each do |ev|
